@@ -1,0 +1,170 @@
+.progress-in-form {
+    margin-top: 7px;
+    margin-bottom: 0;
+}
+
+.form-group.date-input {
+    margin-left: 0;
+    margin-right: 0;
+    width: 13%;
+}
+
+.form-group.date-label {
+    margin-left: 0;
+    margin-right: 0;
+    width: 5%;
+}
+
+.form-group.date-offset {
+    margin-left: 0;
+    margin-right: 0;
+    width: 3%;
+}
+
+.form-group.date-label>label {
+    padding-top: 0;
+    padding-left: 5px;
+}
+
+.selseatbgleftzi {
+    width:1300px;
+    height:500px;
+    overflow:auto;
+    position: relative;
+    color:black;
+}
+
+.selseatbgleftzi .af {
+    position: absolute;
+    cursor:pointer;
+    background-color:#95a5a6;
+    width:15px;
+    height:15px;
+    line-height:15px;
+    margin:0;
+    padding:0;
+    text-align:center;
+    border-style:solid;
+    border-color:white;
+    border-width: 1px;
+}
+
+.selseatbgleftzi .as {
+    position: absolute;
+    background-color:#f0ad4e;
+    width:15px;
+    height:15px;
+    line-height:15px;
+    margin:0;
+    cursor:pointer;
+    padding:0;
+    text-align:center;
+    border-style:solid;
+    border-color:white;
+    border-width: 1px;
+}
+
+.selseatbgleftzi .anum {
+    position: absolute;
+    color:#123456;
+    width:15px;
+    height:15px;
+    line-height:15px;
+    margin:0;
+    padding:0;
+    text-align:center;
+    cursor:pointer;
+}
+
+.introaf {
+    cursor:pointer;
+    background-color:#95a5a6;
+    width:15px;
+    height:15px;
+    line-height:15px;
+    margin:0;
+    padding:0;
+    text-align:center;
+    border-style:solid;
+    border-color:white;
+    border-width: 1px;
+}
+
+.introas {
+    background-color:#f0ad4e;
+    width:15px;
+    height:15px;
+    line-height:15px;
+    margin:0;
+    cursor:pointer;
+    padding:0;
+    text-align:center;
+    border-style:solid;
+    border-color:white;
+    border-width: 1px;
+}
+
+.imageinput{
+    vertical-align:middle;
+    margin:0; 
+    padding:0;
+}
+
+.file-box{ 
+    position:relative;
+    width:340px;
+}
+
+.txt{ height:22px; 
+    border:1px solid #cdcdcd; 
+    width:180px;
+}
+
+.btn_1{ 
+    background-color:#FFF; 
+    border:1px solid #CDCDCD;
+    height:24px; 
+    width:70px;
+}
+
+.file{ 
+    position:absolute; 
+    top:0; 
+    right:80px; 
+    height:24px; 
+    filter:alpha(opacity:0);
+    opacity: 0;
+    width:260px 
+}
+
+#picpath{
+    width: 10px;
+    height: 10px;
+    filter:alpha(opacity=0);
+    -moz-opacity:0;
+    -khtml-opacity: 0;
+    opacity: 0;
+}
+
+#menupath{
+    width: 10px;
+    height: 10px;
+    filter:alpha(opacity=0);
+    -moz-opacity:0;
+    -khtml-opacity: 0;
+    opacity: 0;
+}
+
+#image_area{
+    text-align:center;
+}
+#menu_area{
+    text-align:center;
+}
+
+#input-pic{
+    width:600px;
+}
+#input-menu{
+    width:600px;
+}

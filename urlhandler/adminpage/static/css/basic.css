@@ -1,0 +1,272 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	}
+body{
+	background: #ffffff;
+	color: #303030;
+	text-align: left;
+	font-family: "宋体", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	}
+a{
+	color: #303030;
+	text-decoration: none;
+	}
+a:hover{
+	text-decoration: underline;
+	}
+ul,li{
+	list-style: none;
+	}
+img{
+	border: none;
+	}
+.clear{
+	clear: both;
+	font-size: 0px;
+	height: 0px;
+	line-height: 0px;
+	}
+#outside{
+	width: 980px;
+	margin: 0px auto;
+	}
+.top_bg{
+	margin-bottom: 20px;
+	}
+.top_bg img{display: block;}
+.header{
+	height: 80px;
+	zoom: 1;
+	}
+.header h1{
+	width: 220px;
+	height: 65px;
+	float: left;
+	}
+.turn_city{
+	width: 345px;
+	padding: 36px 0px 0px 17px;
+	float: left;
+	position: relative;
+	z-index: 998;
+	}
+.turn_city h2{
+	font-size: 18px;
+	padding-right: 5px;
+	float: left;
+	}
+.turn_city p{
+	padding-top: 5px;
+	}
+.turn_city p span{
+	text-decoration: underline;
+	}
+.city_list{position: absolute;top: 60px;left: 60px;border: 1px solid #EAEAEA;background: #F1F2F1;padding: 10px 15px 3px;width: 380px;}
+.city_list li{line-height: 20px;padding-left: 50px;margin-bottom: 5px;}
+.city_list li label{display: inline-block;width: 50px;margin-left: -50px;color: #707070;}
+.city_list li a{display: inline-block;padding: 0px 3px; white-space: nowrap;}
+.city_list li a:hover{background: #7DB700;color: #ffffff;text-decoration: none;}
+.head_login{
+	width: 390px;
+	padding-top: 13px;
+	float: right;
+	text-align: right;
+	position: relative;
+	}
+a.head_a1{
+	background: url(https://member.hipiao.com/res/images/icon2.gif) no-repeat right center;
+	padding-right: 15px;
+	}
+a:hover.head_a1{
+	background: url(https://member.hipiao.com/res/images/icon3.gif) no-repeat right center;
+	}
+.head_float1{
+	width: 85px;
+	position: absolute;
+	right: 160px;
+	top: 30px;
+	text-align: left;
+	}
+.head_float1_tbg{
+	background: url(https://member.hipiao.com/res/images/bg1.gif) no-repeat top;
+	display: block;
+	height: 6px;
+	line-height: 6px;
+	font-size: 0px;
+	}
+.head_float1_bbg{
+	background: url(https://member.hipiao.com/res/images/bg1.gif) no-repeat bottom;
+	display: block;
+	height: 6px;
+	line-height: 6px;
+	font-size: 0px;
+	}
+.head_float1 ul{
+	background: #F1F2F1;
+	border-left: 1px solid #EAEAEA;
+	border-right: 1px solid #EAEAEA;
+	}
+.head_float1 a{
+	height: 21px;
+	line-height: 21px;
+	padding-left: 13px;
+	display: block;
+	}
+.head_float1 a:hover{
+	background: #7DB700;
+	color: #ffffff;
+	text-decoration: none;
+	}
+.head_tel{position: absolute;top: 85px;right: 0px;line-height:18px; z-index:1;}
+.head_tel span{display:inline-block;background:url(https://member.hipiao.com/res/images/todyLeftBg.gif) no-repeat left;padding-left:5px;}
+.head_tel span span{background:url(https://member.hipiao.com/res/images/todyRightBg.gif) no-repeat right;padding-right:9px;padding-left:0px;height:18px;line-height:18px;color:#fff;}
+
+.menu{
+	background: url(https://member.hipiao.com/res/images/menu-outbg.gif) repeat-x left bottom;
+	padding-bottom: 17px;
+	height: 1%;
+	overflow: hidden;
+	}
+.menu li{
+	width: 102px;
+	height: 27px;
+	float: left;
+	margin-right: 2px;
+	background: url(https://member.hipiao.com/res/images/menu-bg.gif) no-repeat bottom;
+	}
+.menu a{
+	display: block;
+	width: 102px;
+	height: 27px;
+	text-align: center;
+	line-height: 27px;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 600;
+	}
+.menu a:hover{
+	background: url(https://member.hipiao.com/res/images/menu-bg.gif) no-repeat top;
+	text-decoration: none;
+	}
+.menu_a a{
+	background: url(https://member.hipiao.com/res/images/menu-bg.gif) no-repeat top;
+	text-decoration: none;
+	}
+
+#footer{
+	text-align: center;
+	line-height: 18px;
+	margin-top: 20px;
+	padding-bottom: 10px;
+	color: #616161;
+	}
+#footer a{
+	color: #616161;
+	margin: 0px 3px;
+	}
+#footer span{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	}
+.index_footer1{width: 450px;height: 1%;overflow: hidden;float: left;padding-left: 76px;margin-top: 25px;}
+.index_footer1 img{display: block;float: left;margin-left: 8px;display: inline-block;}
+.index_footer1 p{float: right;line-height: 20px;color: #616161;}
+.index_footer #footer{width: 430px;float: left;text-align: left;margin-left: 20px;color: #303030;}
+.index_footer #footer a{color: #303030;}
+.turn_page{text-align: right;}
+.turn_page a{display: inline-block;background: #ffffff url(https://member.hipiao.com/res/images/a-bg1.gif) repeat-x left bottom;width: 26px;height: 16px;line-height: 16px;text-align: center;border: 1px solid #c7c7c7;margin-left: 3px;color: #5E5E5E;}
+.turn_page a:hover{background: #90c110;text-decoration: none;}
+.turn_page a.page_a{background: #90c110;}
+.turn_page a.page_b{border: none;width: 60px;}
+.turn_page a:hover.page_b{background: none;color: #90c110;}
+.turn_page span a{background: #90c110;}
+.turn_page span a:hover{background: #90c110;text-decoration: none;}
+a.l_y, a.n_y {width:auto;border:none;margin-right:10px;margin-left:10px;}
+a.l_y:hover, a.n_y:hover {background:none;}
+
+.l{
+	float: left;
+	}
+.r{
+	float: right;
+	}
+.c{
+	text-align: center;
+	}
+.font1{color: #ff0000;}
+.font2{color: #707070;}
+.font3 a{color: #539300;text-decoration: underline;}
+.font4{color: #539300;}
+.font5{color: #F39800;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 18px;}
+.font6{color: #539300;font-size: 14px;}
+.font7{color: #539300;text-decoration: line-through;}
+.font8{color: #EB6100;}
+
+.tis1{background: #f9f3d6;border: 1px solid #f4df71;height: 1%;padding: 5px 18px;position: relative;color: #707070;}
+.tis1 b{display: block;width: 5px;height: 5px;line-height: 5px;font-size: 0px;position: absolute;}
+.tis1_ltbg{background: url(https://member.hipiao.com/res/images/hipiao/round1.gif) no-repeat left top;left: -1px;top: -1px;}
+.tis1_rtbg{background: url(https://member.hipiao.com/res/images/hipiao/round1.gif) no-repeat right top;right: -1px;_right: -2px;top: -1px;}
+.tis1_lbbg{background: url(https://member.hipiao.com/res/images/hipiao/round1.gif) no-repeat left bottom;left: -1px;bottom: -1px;}
+.tis1_rbbg{background: url(https://member.hipiao.com/res/images/hipiao/round1.gif) no-repeat right bottom;right: -1px;_right: -2px;bottom: -1px;}
+.tis1 p{line-height: 20px;}
+
+.but1{
+	display: inline-block;
+	background: url(https://member.hipiao.com/res/images/but-lbg.gif) no-repeat left;
+	}
+.but1 span{display: inline-block;margin-left: 6px;background: url(https://member.hipiao.com/res/images/but-rbg.gif) no-repeat right;height: 30px;line-height: 30px;font-size: 14px;font-weight: 600;color: #ffffff;padding: 0px 20px 0px 14px;cursor: pointer;}
+a:hover.but1{
+	text-decoration: none;
+	}
+.but2{
+	display: inline-block;
+	background: url(https://member.hipiao.com/res/images/but-lbg1.gif) no-repeat left;
+	}
+.but2 span{display: inline-block;margin-left: 5px;background: #7db700 url(https://member.hipiao.com/res/images/but-rbg1.gif) no-repeat right;height: 21px;line-height: 21px;font-size: 14px;font-weight: 600;color: #ffffff;padding: 0px 12px 0px 7px;cursor: pointer;}
+a:hover.but2{
+	text-decoration: none;
+	}
+.but3{
+	display: inline-block;
+	background: url(https://member.hipiao.com/res/images/but-lbg2.gif) no-repeat left;
+	}
+.but3 span{display: inline-block;margin-left: 5px;background: url(https://member.hipiao.com/res/images/but-rbg2.gif) no-repeat right;height: 25px;line-height: 25px;font-size: 14px;font-weight: 600;color: #ffffff;padding: 0px 12px 0px 7px;cursor: pointer;}
+a:hover.but3{
+	text-decoration: none;
+	}
+.but4{display: inline-block;background: url(https://member.hipiao.com/res/images/but-bg1.gif) no-repeat;width: 83px;height: 25px;font-size: 14px;font-weight: 600;color: #ffffff;text-align: center;line-height: 25px;}
+.but5{
+	display: inline-block;
+	background: url(https://member.hipiao.com/res/images/but11-lbg.gif) no-repeat left;
+	}
+.but5 span{display: inline-block;margin-left: 6px;background: #F39700 url(https://member.hipiao.com/res/images/but11-rbg.gif) no-repeat right;height: 31px;line-height: 31px;font-size: 14px;font-weight: 600;color: #ffffff;padding: 0px 20px 0px 14px;cursor: pointer;}
+a:hover.but5{
+	text-decoration: none;
+	}
+.but6{display: inline-block;background: url(https://member.hipiao.com/res/images/nobuy.png) no-repeat;width: 83px;height: 25px;font-size: 14px;font-weight: 600;color: #ffffff;text-align: center;line-height: 25px;}
+
+
+/********************************/
+.but10{
+	display: inline-block;
+	background: url(https://member.hipiao.com/res/images/but-lbg.gif) no-repeat left;
+	}
+.but10 span{display: inline-block;margin-left: 6px;background: url(https://member.hipiao.com/res/images/but-rbg.gif) no-repeat right;height: 30px;line-height: 30px;font-size: 14px;font-weight: 600;color: #ffffff;padding: 0px 35px 0px 35px;cursor: pointer;}
+a:hover.but10 {
+	text-decoration: none;
+	}
+.but11{
+	display: inline-block;
+	background: url(https://member.hipiao.com/res/images/but11-lbg.gif) no-repeat left;
+	}
+.but11 span{display: inline-block;margin-left: 6px;background: url(https://member.hipiao.com/res/images/but11-rbg.gif) no-repeat right;height: 30px;line-height: 30px;font-size: 14px;font-weight: 600;color: #ffffff;padding: 0px 35px 0px 29px;cursor: pointer;}
+a:hover.but11{
+	text-decoration: none;
+	}
+.notice{text-align: right;height: 24px;line-height: 24px;padding-right: 10px;}
+.notice img{vertical-align: middle;padding-left: 5px;padding-top: 3px;float: right;}
+.fail_c{text-align: center;line-height: 30px;padding: 100px 0px;}
+.fail_c a{color: #539300;text-decoration: underline;font-weight: 600;font-size: 14px;}
+.fontB{font-weight: 600;}
+.font10{color: #F39800;}

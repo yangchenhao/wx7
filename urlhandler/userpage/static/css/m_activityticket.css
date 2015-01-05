@@ -1,0 +1,58 @@
+body {
+	text-align:center
+}
+
+.panel-title {
+	font-family:微软雅黑;
+	font-weight:bold
+}
+
+.selseatbgleftzi {
+	height:150px;
+	overflow:auto;
+	position: relative;
+	color:black;
+}
+
+.selseatbgleftzi .af {
+	position: absolute;
+	cursor:pointer;
+	background-color:#16a085;
+	width:5px;
+	height:5px;
+	line-height:5px;
+	margin:0;
+	padding:0;
+	text-align:center;
+	border-style:solid;
+	border-color:white;
+	border-width: 1px;
+}
+
+.selseatbgleftzi .as {
+	position: absolute;
+	background-color:red;
+	width:7px;
+	height:7px;
+	line-height:5px;
+	margin:-1px;
+	cursor:pointer;
+	padding:0;
+	text-align:center;
+	border-style:solid;
+	border-color:white;
+	border-width: 1px;
+}
+
+.selseatbgleftzi .anum {
+	position: absolute;
+	color:#123456;
+	width:5px;
+	height:5px;
+	line-height:5px;
+	margin:0;
+	padding:0;
+	text-align:center;
+	cursor:pointer;
+}
+

@@ -1,0 +1,178 @@
+{% extends "mobile_base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}
+座位信息 - 清华紫荆之声
+{% endblock %}
+
+{% block css %}
+<link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet" type="text/css" />
+<link href="{% static "css/m_activityticket.css" %}" rel="stylesheet" type="text/css" />
+<script src="{% static "js/jquery.js" %}"></script>
+{% endblock %}
+
+{% block js %}
+	<script src="{% static "js/bootstrap.min.js" %}"></script>
+	<script src="{% static "js/select.js" %}"></script>
+	<script src="{% static "js/seat.js" %}"></script>
+	
+	<script>
+    function ajaxForm() {
+		submitSelection('{{ act_id }}', '{{ ticket_row }}', '{{ ticket_id }}'); 
+		var seatStatus = document.getElementById("seatStatus").innerHTML;
+		if(seatStatus != 0){
+			window.location.reload();
+		}
+	}
+    window.addEventListener('load', function() {showValidation({{ ticket_row }});}, false);
+    </script>
+{% endblock %}
+
+{% block theme %}
+    “{{ act_name }}”选座系统
+{% endblock %}
+
+{% block content %}
+    <div>
+    	<div id = "idString" style="display:none;">	{{ seat }}</div>
+		<div id = "seatStatus" style="display:none">{{seat_status}}</div>
+		<div id = "activityStatus" style="display:none">{{activity_status}}</div>
+		<div id = "selectionStatus" style="display:none">{{selection_status}}</div>
+		<div id = "ticketStatus" style="display:none">{{new_ticket_status}}</div>
+		<div id = "ticketstatus" style="display:none">{{ticket_status}}</div>
+		<div id = "m_area" style="display:none">{{m_ticket_area}}</div>
+		<div id = "m_col" style="display:none">{{m_ticket_col}}</div>
+		<div id = "m_row" style="display:none">{{m_ticket_row}}</div>
+    </div>
+
+	{% if ticket_status == 1 and seat_status == 0 %}
+		{% include 'activityphoto.html' %}
+	{% elif ticket_status == 1 and seat_status == 1 %}
+		{% include 'activityphoto.html' %}
+	{% elif ticket_status == 1 and activity_status == 1 and  new_ticket_status == 1 %}
+		{% include 'activityphoto.html' %}
+    {% else %}
+    {% endif %}
+    
+	<div class="details-wrapper img-wrapper" id="activityMenu">
+		<div class="slidedown" id="sd-ticket" onclick="sd_ticket()">
+        	<a>
+        		<span><h4>点击展开节目单</h4></span>
+	            <span>
+	                <img src="{% static "img/chevron-down.png" %}" style="margin-bottom:80px;" />
+	            </span>
+            	
+            </a>
+    	</div>
+	    <div class="img-inner" id="menuPic" style="display: none;" >
+	    	<a href = "{%static act_menu %}"><img class="details-img"  style = "height : 90%;width : 90%; margin-bottom:80px;" src="{%static act_menu %}" /></a>
+	        <!-- <img class="details-img" style = "height : 90%;width : 90%" src="{%static act_menu %}" /> -->
+	    </div>
+	</div>
+	
+	
+   	<div class="container-fluid" id = "seatWrapper">
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="panel panel-default" id = "seatPic">
+					<div class="panel-heading">
+						<h4 class="text-center" class="panel-title">座位图</h4>
+					</div>
+					<div class="panel-body"  id="seatMapParent">
+						<div style="text-align:center">
+							<img style="display:none" id="seatImage" src="{%static "img/zongti.png"%}" width="100%"/>
+							<img style="display:none" id="randomImage" src="{%static "img/random.jpg"%}" width="100%"/>
+							<div id="seatMap" class="selseatbgleftzi">
+								<div id="seatMapData" style="padding-left:100px;" width="100%" >
+									<ul id="seatMapData_ul" style="list-style-type:none">
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="text-center" class="panel-title">选择座位</h4>
+					</div>
+					<div id="validationHolder" class="panel-body">
+						<form id="seatSelect" class="form-horizontal"  action="{% url "userpage.views.selection_view" %}" method="post" role="form"  onsubmit="return false;">
+							{% csrf_token %}
+							<div class="form-group">
+								<div class="col-sm-2">
+									<p id="sec1">请选择区域</p>
+									<select id="area" onchange="areaClick(this[selectedIndex].value);" name="area" required="required">
+									</select>
+								</div>
+							</div>
+							<div class="form-group" id="seatRow">
+								<div class="col-sm-2">
+									<p id="sec2">请选择排</p>
+									<select id="row" onchange="rowClick(this[selectedIndex].value);" name="row" required="required">
+									</select>	
+								</div>
+							</div>
+							<div class="form-group" id="seatCol">
+								<div class="col-sm-2">
+									<p id="sec3">请选择座号</p>
+									<select id="col" name="col" onchange="colClick(this[selectedIndex].value);" required="required">
+									</select>	
+								</div>
+							</div>
+							<div class="form-group" id="submitGroup">
+								<div class="col-sm-offset-1 col-sm-10">
+									<button onclick="ajaxForm();" class="btn btn-primary" id="submitBtn">确认</button>
+									<p class="help-block" id="helpLoading" style="display: none"><img src="{% static "img/loading.gif" %}">正在选座，请稍候...</p>
+              						<p class="help-block" id="helpSubmit"></p>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div id="successHolder" style="display: none; text-align:center" >
+				        <img src="{% static "img/success.png" %}" />
+				        <div id="successMsg0" style="dispaly:none;">
+				        	<p>恭喜您抢票成功！</p>
+				        </div>
+				        <div id="successMsg1" style="dispaly:none;">
+				        	<p>恭喜您选座成功！</p>
+					        <p>您的座位在：</p>
+							<p>{{m_ticket_area}} 区</p>
+							<p>{{m_ticket_row}} 排</p>
+							<p>{{m_ticket_col}} 座</p>
+				        </div>	
+				        <div id="successMsg2" style="dispaly:none;">
+				        	<p>您的志愿已经提交：</p>
+							<p>第一志愿：{{seat1}} 区</p>
+							<p>第二志愿：{{seat2}} 区</p>
+							<p>第三志愿：{{seat3}} 区</p>
+				        </div>			
+				    </div>
+				    <div id="ticketWaiting" style="display: none; text-align:center" >
+				        <img src="{% static "img/loading.gif" %}" />
+				        <p>正在抽签！</p>
+				        <p>请耐心等待……</p>
+				    </div>
+				    <div id="ticketResult_Succ" style="display: none; text-align:center" >
+				        <img src="{% static "img/success.png" %}" />
+				        <h5>抽签结束！</h5>
+				        <h5>恭喜您抢票成功！</h5>
+						<p>您的座位：{{m_seat}}区</p>
+				    </div>
+				    <div id="ticketResult_Fail" style="display: none; text-align:center" >
+				        <img src="{% static "img/warning.png" %}" width="50%" height="50%"/>
+				        <h5>抽签结束！</h5>
+				        <h5>很抱歉抢票失败……</h5>
+				        <p>胜败乃兵家常事，大侠请重新来过</p>
+				    </div>
+					<div id="ticketInvalid" style="display: none; text-align:center" >
+				        <img src="{% static "img/warning.png" %}" width="50%" height="50%"/>
+				        <h5>很抱歉票已失效……</h5>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+{% endblock %}

@@ -1,0 +1,112 @@
+﻿{% load staticfiles %}
+
+<html>
+    
+        <title>找我</title>
+	    <!--下面的额meta是用来支持移动设备的缩放-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 引入 Bootstrap -->
+        {% block css %}
+	    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet" type="text/css" />
+		<link rel='stylesheet' type='text/css' href="{% static "css/immybox.css" %}" />
+		<style type='text/css'>
+		  .immybox.immybox_witharrow {
+			background-image: url(/static/img/immybox-arrow.png);
+		  }
+		</style>
+		{% endblock %}
+		
+		{% block js %}
+		<script src="{% static "js/jquery.js" %}"></script>
+		<script src="{% static "js/bootstrap.min.js" %}"></script>
+		<script src="{% static "js/jquery.immybox.js" %}"></script>
+
+		<script type='text/javascript'>
+		  $(function() {
+
+			// simple example
+			$('#school').immybox({
+			  choices: [
+				{text: '软件学院', value: 'software'},
+				{text: '计算机学院', value: 'computer'},
+			  ]
+			});
+			$('#grade').immybox({
+			  choices: [
+				{text: '大一', value: '1'},
+				{text: '大二', value: '2'},
+				{text: '大三', value: '3'},
+				{text: '大四', value: '4'},
+				{text: '研究僧', value: '5'},
+				{text: '博士僧', value: '6'},
+			  ]
+			});
+		  });
+		</script>
+		{% endblock %}
+	
+    <body>
+        <div class="container-fluid">
+			<div class="row-fluid">
+					<form class="form-horizontal" role="form">
+						<legend>我的信息</legend>
+						<div class="form-group">
+							<label class="col-sm-1 control-label">姓名</label>
+							<div class="col-sm-2">
+								<input type="text" class="form-control" id="firstname" 
+									placeholder="请输入你的真实姓名">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-1 control-label">我的学院</label>
+							<div class="col-sm-2">
+								<input id='school' type='text' class='form-control'>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-1 control-label">我的年级</label>
+							<div class="col-sm-2">
+								<input id='grade' type='text' class='form-control'>
+							</div>
+						</div>
+						<div class ="form-group">
+							<label class="col-sm-1 control-label">情趣方向</label>
+							<div class="col-sm-1 checkbox">
+							   <label><input type="checkbox" value="">科研</label>
+							</div>
+							<div class="col-sm-1 checkbox">
+							   <label><input type="checkbox" value="">创业</label>
+							</div>
+							<div class="col-sm-1 checkbox">
+							   <label><input type="checkbox" value="">社工</label>
+							</div>
+							<div class="col-sm-1 checkbox">
+							   <label><input type="checkbox" value="">交友</label>
+							</div>
+						</div>
+						<div class ="form-group">
+							<label class="col-sm-1 control-label">相关经验</label>
+							<div class="col-sm-4">
+								<textarea class="form-control" rows=""></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-10">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox"> 同意将信息发送给“找你”的人
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-10">
+								<button type="submit" class="btn btn-primary">找我！</button>
+							</div>
+						</div>
+					</form>
+				
+			</div>
+        </div>	  
+    </body>
+</html>
